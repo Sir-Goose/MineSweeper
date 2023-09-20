@@ -1,0 +1,55 @@
+public void findAdjacentMines(Cell[][] cells) {
+    if (isMine) {
+      return;
+    }
+    try {
+      if (cells[row - 1][col].isMine) {
+        minesAround++;
+      }
+    } catch (ArrayIndexOutOfBoundsException ignored) {
+    }
+    try {
+      if (cells[row + 1][col].isMine) {
+        minesAround++;
+      }
+    } catch (ArrayIndexOutOfBoundsException ignored) {
+    }
+    try {
+      if (cells[row][col - 1].isMine) {
+        minesAround++;
+      }
+    } catch (ArrayIndexOutOfBoundsException ignored) {
+    }
+    try {
+      if (cells[row][col + 1].isMine) {
+        minesAround++;
+      }
+    } catch (ArrayIndexOutOfBoundsException ignored) {
+    }
+    try {
+      if (cells[row - 1][col - 1].isMine) {
+        minesAround++;
+      }
+    } catch (ArrayIndexOutOfBoundsException ignored) {
+    }
+    try {
+      if (cells[row - 1][col + 1].isMine) {
+        minesAround++;
+      }
+    } catch (ArrayIndexOutOfBoundsException ignored) {
+    }
+    try {
+      if (cells[row + 1][col - 1].isMine) {
+        minesAround++;
+      }
+    } catch (ArrayIndexOutOfBoundsException ignored) {
+    }
+    try {
+      if (cells[row + 1][col + 1].isMine) {
+        minesAround++;
+      }
+    } catch (ArrayIndexOutOfBoundsException ignored) {
+    }
+
+
+  }
